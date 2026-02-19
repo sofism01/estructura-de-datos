@@ -1,4 +1,4 @@
-package Collections;
+package Collections.Ejercicios_contextualizacion;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;

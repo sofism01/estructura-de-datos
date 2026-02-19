@@ -1,4 +1,4 @@
-package Collections;
+package Collections.Ejercicios_contextualizacion;
 import java.util.LinkedList;
 import java.util.Queue;
 
