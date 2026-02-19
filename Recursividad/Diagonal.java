@@ -1,3 +1,4 @@
+package Recursividad;
 public class Diagonal {
 // Tipos de recursión: DIRECTA, LINEAL, DE COLA.
     // Método recursivo para recorrer la diagonal principal

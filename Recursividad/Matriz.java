@@ -1,3 +1,4 @@
+package Recursividad;
 public class Matriz {
 // Tipos de recursión: DIRECTA, LINEAL, DE COLA. 
     // Método recursivo para recorrer una matriz

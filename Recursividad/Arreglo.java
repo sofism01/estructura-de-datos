@@ -1,3 +1,4 @@
+package Recursividad;
 public class Arreglo {
 // Tipos de recursión: DIRECTA, LINEAL, DE COLA.
     // Método recursivo para recorrer un arreglo
