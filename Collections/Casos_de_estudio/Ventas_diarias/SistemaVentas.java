@@ -1,4 +1,4 @@
-package Collections.Ventas_diarias;
+package Collections.Casos_de_estudio.Ventas_diarias;
 
 public class SistemaVentas {
     

@@ -1,4 +1,4 @@
-package Collections.Ventas_masivas;
+package Collections.Casos_de_estudio.Ventas_masivas;
 
 public class Producto {
     
