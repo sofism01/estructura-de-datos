@@ -1,6 +1,6 @@
 package Generics;
 
-public class mostrarElemento {
+public class MostrarElemento {
 
     public static <T> void mostrar(T elemento) {
         System.out.println(elemento);
