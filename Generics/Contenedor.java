@@ -1,3 +1,5 @@
+package Generics;
+
 import java.util.ArrayList;
 
 interface IContenedor<T> {
