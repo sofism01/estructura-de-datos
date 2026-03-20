@@ -67,6 +67,39 @@ public class ListaSimplementeEnlazada<T> {
         actual.setSiguiente(null); // Elimina el último nodo
     }
 
+    // Elimina un nodo al inicio de la lista
+    public void eliminarAlInicio() {
+        if (cabeza == null) {
+            return; // Lista vacía
+        }
+        cabeza = cabeza.getSiguiente();
+    }
+
+    // Elimina un nodo en una posición específica
+    public void eliminarEnPosicion(int posicion) {
+        if (posicion < 0) {
+            throw new IllegalArgumentException("La posición no puede ser negativa.");
+        }
+        if (cabeza == null) {
+            throw new IllegalArgumentException("La lista está vacía.");
+        }
+        if (posicion == 0) {
+            cabeza = cabeza.getSiguiente();
+            return;
+        }
+        Nodo<T> actual = cabeza;
+        for (int i = 0; i < posicion - 1; i++) {
+            if (actual == null || actual.getSiguiente() == null) {
+                throw new IllegalArgumentException("La posición excede el tamaño de la lista.");
+            }
+            actual = actual.getSiguiente();
+        }
+        if (actual.getSiguiente() == null) {
+            throw new IllegalArgumentException("La posición excede el tamaño de la lista.");
+        }
+        actual.setSiguiente(actual.getSiguiente().getSiguiente());
+    }
+
     // Imprime el contenido de la lista
     public void imprimir() {
         Nodo<T> actual = cabeza;
