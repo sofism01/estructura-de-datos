@@ -100,6 +100,66 @@ public class ListaSimplementeEnlazada<T> {
         actual.setSiguiente(actual.getSiguiente().getSiguiente());
     }
 
+    // Busca un elemento en la lista
+    public boolean buscar(T valor) {
+        Nodo<T> actual = cabeza;
+        while (actual != null) {
+            T valorActual = actual.getValor();
+            if (valorActual == null) {
+                if (valor == null) {
+                    return true;
+                }
+            } else if (valorActual.equals(valor)) {
+                return true;
+            }
+            actual = actual.getSiguiente();
+        }
+        return false;
+    }
+
+    // Ordena la lista (asumiendo que T es Comparable)
+    public void ordenar() {
+        if (cabeza == null || cabeza.getSiguiente() == null) {
+            return;
+        }
+
+        boolean huboIntercambio;
+        do {
+            huboIntercambio = false;
+            Nodo<T> actual = cabeza;
+
+            while (actual.getSiguiente() != null) {
+                T valorActual = actual.getValor();
+                T valorSiguiente = actual.getSiguiente().getValor();
+
+                if (comparar(valorActual, valorSiguiente) > 0) {
+                    actual.setValor(valorSiguiente);
+                    actual.getSiguiente().setValor(valorActual);
+                    huboIntercambio = true;
+                }
+
+                actual = actual.getSiguiente();
+            }
+        } while (huboIntercambio);
+    }
+
+    @SuppressWarnings("unchecked")
+    private int comparar(T a, T b) {
+        if (a == b) {
+            return 0;
+        }
+        if (a == null) {
+            return -1;
+        }
+        if (b == null) {
+            return 1;
+        }
+        if (!(a instanceof Comparable)) {
+            throw new IllegalStateException("El tipo de dato debe implementar Comparable para ordenar la lista.");
+        }
+        return ((Comparable<T>) a).compareTo(b);
+    }
+
     // Imprime el contenido de la lista
     public void imprimir() {
         Nodo<T> actual = cabeza;
