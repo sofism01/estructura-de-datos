@@ -1,3 +1,4 @@
+package Unidad2.Seguimiento.Ejercicio1;
 public class Main {
     public static void main(String[] args) {
         ColaPanaderia<String> colaPanaderia = new ColaPanaderia<>();

@@ -1,3 +1,4 @@
+package Unidad2.Seguimiento.Ejercicio1;
   public class NodoP<T> {
     private T valor;
     private NodoP<T> siguiente;

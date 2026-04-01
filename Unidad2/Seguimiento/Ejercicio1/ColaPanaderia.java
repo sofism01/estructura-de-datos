@@ -1,3 +1,4 @@
+package Unidad2.Seguimiento.Ejercicio1;
 public class ColaPanaderia<T> {
     private NodoP<T> frente;  // Primer cliente en la cola
     private NodoP<T> finalCola;  // Último cliente en la cola
