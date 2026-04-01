@@ -9,7 +9,8 @@ public class BiCola {
         this.fin = null;
     }
 
-    public void encolarFrente(String valor) {
+    // Agrega un elemento al inicio de la bi-cola
+    public void agregarInicio(String valor) {
         Nodo<String> nuevoNodo = new Nodo<>(valor);
         if (inicio == null) {
             inicio = nuevoNodo;
@@ -20,7 +21,8 @@ public class BiCola {
         }
     }
 
-    public void encolarFondo(String valor) {
+    // Agrega un elemento al final de la bi-cola
+    public void agregarFinal(String valor) {
         Nodo<String> nuevoNodo = new Nodo<>(valor);
         if (fin == null) {
             inicio = nuevoNodo;
@@ -31,7 +33,8 @@ public class BiCola {
         }
     }
 
-    public String desencolarFrente() {
+    // Elimina un elemento del inicio de la bi-cola
+    public String eliminarInicio() {
         if (inicio == null) {
             return null; // Cola vacía
         }
@@ -43,7 +46,8 @@ public class BiCola {
         return valor;
     }
 
-    public String desencolarFondo() {
+    // Elimina un elemento del final de la bi-cola
+    public String eliminarFinal() {
         if (fin == null) {
             return null; // Cola vacía
         }
